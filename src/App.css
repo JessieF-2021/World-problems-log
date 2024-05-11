@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  p {
+    color: #737373;
+    font-family: "Manrope", sans-serif;
+    font-weight: bold;
+  }
+
+  h2,
+  h4 {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+  }
+}
+
+/* Hero section starts */
+.hero {
+  display: flex;
+}
+
+.hero-head {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 6rem;
+}
+.hero h2 {
+  font-size: 50px;
+}
+
+.hero {
+  background-image: url("./assets/heroImg.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+h2 span {
+  color: #e14640;
+}
+
+.hero-image img {
+  width: 380px;
+  height: 367px;
+  object-fit: contain;
+  margin-top: 62px;
+  margin-left: 47px;
+}
+
+/* Hero section ends */
+
+/* buttons start */
+
+.primary-btn {
+  background-color: #e14640;
+  color: #ffff;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+  background-color: #c0392b; 
+  transform: scale(1.05); 
+}
+
+.primary-btn:active {
+  transform: scale(0.95); 
+}
+
+.btns {
+  display: flex;
+}
+
+.btn2 {
+  background-color: transparent;
+  color: #000000;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  font-family: "Manrope", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn2 .arrow-icon {
+  text-align: center;
+  padding-top: 4px;
+}
+
+.btn2:hover {
+  font-size: 1em;
+  font-weight: 600;
+  color: #e14640;
+  margin-left: 10px;
+  text-shadow: 4px 4px 8px #837474;
+  cursor: pointer;
+  transform: scale(1.05); 
+}
+
+/* .btn2:active {
+  transform: scale(0.95); 
+} */
+
+.primary-btn2 {
+  background-color: #e14640;
+  color: #ffff;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn2:hover {
+  background-color: #c0392b; 
+  transform: scale(1.05); 
+}
+
+.primary-btn2:active {
+  transform: scale(0.95); 
+}
+
+.primary-btn3 {
+  background-color: #e14640;
+  color: #ffff;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  width: 6rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.primary-btn3:hover {
+  background-color: #c0392b; 
+  transform: scale(1.05); 
+}
+
+.primary-btn3:active {
+  transform: scale(0.95); 
+}
+
+.secondary-btn {
+  background-color: #000000;
+  color: #ffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 3em;
+  margin-bottom: 4.5em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.secondary-btn:hover {
+  font-size: 1em;
+  box-shadow: 3px 3px 5px #9e9696;
+  cursor: pointer;
+  background-color: #c0392b; 
+  transform: scale(1.05); 
+}
+
+.secondary-btn:active {
+  transform: scale(0.95); 
+}
+
+/* buttons end */
+
+/* Journey section starts */
+
+.journey-head {
+  text-align: center;
+}
+
+.journey-head h2 {
+  padding-top: 1.5em;
+}
+.journey-head p {
+  padding-top: 0.5em;
+  padding-bottom: 3em;
+  font-size: 1em;
+}
+
+.journey-perks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 8em;
+}
+
+.journey-perks img {
+  padding-bottom: 0.3em;
+}
+
+.journey-perks h4 {
+  padding-bottom: 0.7em;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.journey-perks p {
+  line-height: 1.3em;
+}
+/* Jounery section  ends */
+
+/* Trends section starts */
+.trends-head {
+  text-align: center;
+}
+
+.trends-head h2 {
+  padding-bottom: 0.5em;
+}
+
+.trends-head p {
+  padding-bottom: 3em;
+}
+
+.burdens {
+  display: flex;
+  flex-direction: column;
+}
+
+.burdens-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  padding: 30px;
+  margin: 8px auto;
+}
+
+.list {
+  display: flex;
+  margin-bottom: 2em;
+}
+
+.list-h4 {
+  padding-top: 2em;
+}
+
+.burdens-list p {
+  padding-top: 3em;
+  margin-left: -4.6em;
+}
+
+.trends-btn {
+  text-align: center;
+}
+
+.trends-btn .sec-icon {
+  padding-top: 0.3em;
+}
+
+/* Trends section ends */
+
+/* Log section starts */
+.log-container {
+  text-align: center;
+}
+
+.log-container h2 {
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.log-container p {
+  padding-bottom: 0.8em;
+}
+
+/* Log section ends */
+
+/* Share burden page starts */
+.share-container {
+  background-image: url("./assets/burdenImg.png");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.share-head {
+  padding-top: 3em;
+  text-align: center;
+}
+
+.share-head p {
+  padding: 0.8em 0 2em 0;
+}
+
+form {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+textarea {
+  width: 320px;
+  padding: 10px 0 0 10px;
+  background-color: #ededed;
+  border-color: #8c8b8b;
+  border-radius: 8px;
+}
+
+input {
+  width: 320px;
+  padding: 10px;
+  background-color: #ededed;
+  color: #8c8b8b;
+  border-color: #8c8b8b;
+  border-radius: 8px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  padding-left: 10px;
+}
+
+.share-btn {
+  text-align: center;
+  color: #8c8b8b;
+}
+
+/* Share burden page starts */
+
+@media screen and (max-width: 767px) {
+  .hero {
+    display: block;
+  }
+
+  .hero-image img {
+   
+  }
+
+  .journey-perks {
+    display: block;
+    padding: 37px;
+  }
+
+  .global,
+  .guidance {
+    padding-top: 1.8em;
+  }
+
+  .list {
+    display: block;
+  }
+
+  .burdens-list p {
+    /* padding-top: 3em; */
+    margin-left: 0;
+  }
+
+  .trends-btn {
+    display: block;
+  }
+
+  .share-container {
+  }
+}
