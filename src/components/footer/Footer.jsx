@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo/logo.svg";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoYoutube } from "react-icons/io5";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
 import "./Footer.css";
-// import Modal from "./Modal";
+
 function Footer() {
   return (
     <div className="footer">
@@ -44,7 +44,6 @@ function Footer() {
           </li>
         </ul>
       </div>
-      {/* <Modal /> */}
     </div>
   );
 }

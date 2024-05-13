@@ -1,9 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "./Button";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import BurdensCard from "./BurdensCard";
+import useStore from "../store";
+import "./Modal.css";
+import { IoClose } from "react-icons/io5";
 
 function Trends() {
+  const [burdens, setBurdens] = useState([]);
+  const { data, setData } = useStore();
+  const [openModal, setOpenModal] = useState(false);
+  console.log(data);
+  useEffect(() => {
+    const handleGetBurdens = async () => {
+      try {
+        const response = await fetch(
+          "https://us-central1-wpl-jessie.cloudfunctions.net/getData",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Error sending burden");
+        }
+
+        const data = await response?.json();
+        const newData = data?.slice(0, 2);
+        setBurdens(newData);
+        console.log(data);
+      } catch (error) {
+        console.error("Error sending burden:", error);
+      }
+    };
+
+    handleGetBurdens();
+  }, []);
+
+  const handleView = (item) => {
+    setData(item);
+    setOpenModal(true);
+    console.log(item);
+  };
+
   return (
     <>
       <div className="trends-container">
@@ -16,43 +59,43 @@ function Trends() {
         </div>
 
         <div className="burdens">
-          <div className="burdens-list">
-            <div className="list">
-              <Button className="primary-btn2">S01</Button>
-              <h4>Sender 001</h4>
-            </div>
-            <p>
-              How do I navigate a toxic friendship without hurting anyone?"
-              <br /> "I feel suffocated ny societal expectations. How do I break
-              free and live authentically?"
-            </p>
-            <div className="list">
-              <Button className="primary-btn3">View</Button>
-            </div>
-          </div>
-
-          <div className="burdens-list">
-            <div className="list">
-              <Button className="primary-btn2">S01</Button>
-              <h4>Sender 001</h4>
-            </div>
-            <p>
-              How do I navigate a toxic friendship without hurting anyone?"
-              <br /> "I feel suffocated ny societal expectations. How do I break
-              free and live authentically?"
-            </p>
-            <div className="list-btn">
-              <Button className="primary-btn3">View</Button>
-            </div>
-          </div>
+          {burdens?.map((item) => (
+            <BurdensCard
+              key={item?.id}
+              onclick={() => handleView(item)}
+              burdenText={item}
+            />
+          ))}
         </div>
         <div className="trends-btn">
           <Link to="/burdens-log">
-          <Button className="secondary-btn" >
-            See all burdens <FaArrowRight className="sec-icon" />
-          </Button>
+            <Button className="secondary-btn">
+              See all burdens <FaArrowRight className="sec-icon" />
+            </Button>
           </Link>
         </div>
+        {openModal && (
+          <div className="modal-bg">
+            <div className="modal-container">
+              <IoClose
+                className="close"
+                onClick={() => setOpenModal(!openModal)}
+              />
+
+              <div
+                className="modal-text"
+                style={{
+                  padding: "0",
+                  fontSize: "1rem",
+                  fontFamily: '"Manrope", sans-serif',
+                  lineHeight: "2rem",
+                }}
+              >
+                {data?.burden}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

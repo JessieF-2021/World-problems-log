@@ -13,9 +13,9 @@ function Log() {
         zone where you can speak your mind without fear of <br /> repercussions.
       </p>
       <Link to="/share-burden">
-      <Button className="primary-btn" style={{marginBottom: "20px"}}>
-        Share your burden
-      </Button>
+        <Button className="primary-btn" style={{ marginBottom: "20px" }}>
+          Share your burden
+        </Button>
       </Link>
     </div>
   );

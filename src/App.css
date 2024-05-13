@@ -22,26 +22,21 @@ body {
 
 /* Hero section starts */
 .hero {
-  display: flex;
-}
-
-.hero-head {
-  padding: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-top: 6rem;
-}
-.hero h2 {
-  font-size: 50px;
-}
-
-.hero {
   background-image: url("./assets/heroImg.png");
   background-position: center;
   background-size: cover;
-  width: 100%;
-  height: 100vh;
+  display: flex;
+  gap: 3rem;
+}
+
+.hero .hero-head {
+  padding: 7rem 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.hero-head h2 {
+  font-size: 4rem;
 }
 
 h2 span {
@@ -49,11 +44,10 @@ h2 span {
 }
 
 .hero-image img {
-  width: 380px;
-  height: 367px;
-  object-fit: contain;
+  width: 100%;
+  height: 91.5vh;
   margin-top: 62px;
-  margin-left: 47px;
+  /* margin-left: 47px; */
 }
 
 /* Hero section ends */
@@ -64,6 +58,7 @@ h2 span {
   background-color: #e14640;
   color: #ffff;
   border-radius: 5px;
+  width: 120px;
   padding: 10px;
   border: none;
   cursor: pointer;
@@ -71,12 +66,12 @@ h2 span {
 }
 
 .primary-btn:hover {
-  background-color: #c0392b; 
-  transform: scale(1.05); 
+  background-color: #c0392b;
+  transform: scale(1.05);
 }
 
 .primary-btn:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .btns {
@@ -107,12 +102,8 @@ h2 span {
   margin-left: 10px;
   text-shadow: 4px 4px 8px #837474;
   cursor: pointer;
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
-
-/* .btn2:active {
-  transform: scale(0.95); 
-} */
 
 .primary-btn2 {
   background-color: #e14640;
@@ -124,12 +115,12 @@ h2 span {
 }
 
 .primary-btn2:hover {
-  background-color: #c0392b; 
-  transform: scale(1.05); 
+  background-color: #c0392b;
+  transform: scale(1.05);
 }
 
 .primary-btn2:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .primary-btn3 {
@@ -138,17 +129,17 @@ h2 span {
   border-radius: 5px;
   padding: 10px;
   border: none;
-  width: 6rem;
+  width: 96px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .primary-btn3:hover {
-  background-color: #c0392b; 
-  transform: scale(1.05); 
+  background-color: #c0392b;
+  transform: scale(1.05);
 }
 
 .primary-btn3:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .secondary-btn {
@@ -157,21 +148,14 @@ h2 span {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  margin-top: 3em;
-  margin-bottom: 4.5em;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 48px;
+  margin-bottom: 72px;
 }
 
 .secondary-btn:hover {
-  font-size: 1em;
   box-shadow: 3px 3px 5px #9e9696;
   cursor: pointer;
-  background-color: #c0392b; 
-  transform: scale(1.05); 
-}
-
-.secondary-btn:active {
-  transform: scale(0.95); 
+  background-color: #c0392b;
 }
 
 /* buttons end */
@@ -183,11 +167,11 @@ h2 span {
 }
 
 .journey-head h2 {
-  padding-top: 1.5em;
+  padding-top: 24px;
 }
 .journey-head p {
-  padding-top: 0.5em;
-  padding-bottom: 3em;
+  padding-top: 8px;
+  padding-bottom: 48px;
   font-size: 1em;
 }
 
@@ -196,15 +180,15 @@ h2 span {
   justify-content: center;
   align-items: center;
   gap: 50px;
-  padding-bottom: 8em;
+  padding-bottom: 128px;
 }
 
 .journey-perks img {
-  padding-bottom: 0.3em;
+  padding-bottom: 4.8px;
 }
 
 .journey-perks h4 {
-  padding-bottom: 0.7em;
+  padding-bottom: 11.2px;
   font-size: 1.3em;
   font-weight: 600;
 }
@@ -220,11 +204,11 @@ h2 span {
 }
 
 .trends-head h2 {
-  padding-bottom: 0.5em;
+  padding-bottom: 8px;
 }
 
 .trends-head p {
-  padding-bottom: 3em;
+  padding-bottom: 48px;
 }
 
 .burdens {
@@ -234,27 +218,33 @@ h2 span {
 
 .burdens-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 2rem;
   border: none;
   border-radius: 3px;
   background-color: #f9f9f9;
-  padding: 30px;
+  flex-direction: column;
   margin: 8px auto;
+  width: 65%;
+}
+
+.list-content {
+  display: flex;
+  padding-left: 2.5rem;
+  gap: 3rem;
 }
 
 .list {
   display: flex;
-  margin-bottom: 2em;
+  align-items: center;
+  gap: 5px;
 }
 
 .list-h4 {
-  padding-top: 2em;
+  padding-top: 32px;
 }
 
-.burdens-list p {
-  padding-top: 3em;
-  margin-left: -4.6em;
+.list-content p {
+  max-width: 90%;
 }
 
 .trends-btn {
@@ -262,7 +252,7 @@ h2 span {
 }
 
 .trends-btn .sec-icon {
-  padding-top: 0.3em;
+  padding-top: 4.8px;
 }
 
 /* Trends section ends */
@@ -273,12 +263,12 @@ h2 span {
 }
 
 .log-container h2 {
-  padding-top: 1.5em;
-  padding-bottom: 0.5em;
+  padding-top: 24px;
+  padding-bottom: 8px;
 }
 
 .log-container p {
-  padding-bottom: 0.8em;
+  padding-bottom: 8px;
 }
 
 /* Log section ends */
@@ -290,38 +280,53 @@ h2 span {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 48px;
 }
 
 .share-head {
-  padding-top: 3em;
   text-align: center;
 }
-
 .share-head p {
-  padding: 0.8em 0 2em 0;
+  padding: 12.8px 0 32px 0;
 }
 
 form {
-  display: block;
-  margin-bottom: 10px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.check {
+  display: flex;
+  margin: 10px 0 10px 20px;
 }
 
 textarea {
-  width: 320px;
-  padding: 10px 0 0 10px;
-  background-color: #ededed;
-  border-color: #8c8b8b;
-  border-radius: 8px;
-}
-
-input {
-  width: 320px;
+  width: 520px;
   padding: 10px;
   background-color: #ededed;
-  color: #8c8b8b;
   border-color: #8c8b8b;
   border-radius: 8px;
+  outline: none;
+}
+
+input[type="email"] {
+  width: 520px;
+  height: 55px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ededed;
+  color: #000000;
+  border-color: #8c8b8b;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  background-color: #e14640;
 }
 
 input::placeholder,
@@ -331,18 +336,26 @@ textarea::placeholder {
 
 .share-btn {
   text-align: center;
-  color: #8c8b8b;
 }
 
-/* Share burden page starts */
+/* Share burden page ends */
 
 @media screen and (max-width: 767px) {
   .hero {
     display: block;
   }
 
+  .hero .hero-head {
+    padding: 4rem 0 0 2rem;
+  }
+
   .hero-image img {
-   
+    width: 90%;
+    height: 39vh;
+    padding-right: 15px;
+  }
+  .start-journey {
+    padding: 0 15px 0 15px;
   }
 
   .journey-perks {
@@ -352,22 +365,42 @@ textarea::placeholder {
 
   .global,
   .guidance {
-    padding-top: 1.8em;
+    padding-top: 28.8px;
+  }
+
+  .trends-head {
+    padding: 0 15px 0 15px;
   }
 
   .list {
-    display: block;
+    display: flex;
   }
 
-  .burdens-list p {
-    /* padding-top: 3em; */
-    margin-left: 0;
+  .burdens-list {
+    width: 89%;
   }
 
-  .trends-btn {
-    display: block;
+  .list-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+
+  .log-container {
+    padding: 0 15px 0 15px;
+  }
+
+  textarea {
+    width: 400px;
+  }
+
+  input[type="email"] {
+    width: 400px;
   }
 
   .share-container {
+    padding: 20px;
   }
 }

@@ -9,9 +9,9 @@ function Home() {
     <>
       <div>
         <Hero />
-        <Journey />
+         <Journey />
         <Trends />
-        <Log />
+        <Log /> 
       </div>
     </>
   );
