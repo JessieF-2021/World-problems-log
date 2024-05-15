@@ -6,7 +6,7 @@ import hero from "../assets/hero.png";
 
 function Hero() {
   const handleClick = () => {
-    console.log("Button clicked");
+    // console.log("Button clicked");
   };
   return (
     <>

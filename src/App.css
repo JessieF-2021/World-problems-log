@@ -158,6 +158,32 @@ h2 span {
   background-color: #c0392b;
 }
 
+.load {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.load-btn {
+  background-color: #bababa;
+  color: #fff;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  margin-top: 1rem;
+}
+
+
+.load-btn:hover {
+  box-shadow: 3px 3px 5px #9e9696;
+  cursor: pointer;
+  background-color: #413c3c;
+}
+
 /* buttons end */
 
 /* Journey section starts */
@@ -203,9 +229,10 @@ h2 span {
   text-align: center;
 }
 
-.trends-head h2 {
-  padding-bottom: 8px;
-}
+/* .trends-head h2 {
+  padding-top: 48px;
+  padding-bottom: 2rem;
+} */
 
 .trends-head p {
   padding-bottom: 48px;
@@ -260,6 +287,13 @@ h2 span {
 /* Log section starts */
 .log-container {
   text-align: center;
+}
+
+.log-head {
+  text-align: center;
+}
+.log-head p {
+  padding: 1rem 0;
 }
 
 .log-container h2 {
@@ -403,4 +437,9 @@ textarea::placeholder {
   .share-container {
     padding: 20px;
   }
+
+.log-head {
+  padding: 0 15px 0 15px;
+}
+
 }
