@@ -5,32 +5,10 @@ import { Link } from "react-router-dom";
 
 function BurdensLog() {
   const [burdens, setBurdens] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(4);
 
-  const handleClick = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(
-        "https://us-central1-wpl-jessie.cloudfunctions.net/getData",
-        {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Error fetching burdens");
-      }
-
-      const data = await response.json();
-      setBurdens((prevBurdens) => [...prevBurdens, ...data]);
-    } catch (error) {
-      console.error("Error fetching burdens:", error);
-    } finally {
-      setIsLoading(false);
-    }
+  const loadMoreBurdens = () => {
+    setIsLoading((prevValue) => prevValue + 4);
   };
 
   useEffect(() => {
@@ -71,12 +49,12 @@ function BurdensLog() {
         </div>
 
         <div className="burdens">
-          {burdens.slice(0, 8).map((item, index) => (
+          {burdens.slice(0, isLoading).map((item, index) => (
             <BurdensCard key={index} burdenText={item} />
           ))}
           {burdens.length > 8 && (
             <div className="load">
-              <Button onClick={handleClick} className="load-btn">
+              <Button onClick={loadMoreBurdens} className="load-btn">
                 {isLoading ? "Loading..." : "Load more"}
               </Button>
             </div>
