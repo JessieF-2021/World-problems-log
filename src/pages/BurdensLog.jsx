@@ -52,7 +52,7 @@ function BurdensLog() {
           {burdens.slice(0, isLoading).map((item, index) => (
             <BurdensCard key={item.id} burdenText={item} index = {index}/>
           ))}
-          {burdens.length < 4 && (
+          {burdens.length > 4 && (
             <div className="load">
               <Button onClick={loadMoreBurdens} className="load-btn">
                 {isLoading ? "Loading..." : "Load more"}
