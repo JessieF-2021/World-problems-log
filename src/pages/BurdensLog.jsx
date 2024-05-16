@@ -25,13 +25,13 @@ function BurdensLog() {
         );
 
         if (!response.ok) {
-          throw new Error("Error fetching burdens");
+          throw new Error("Cannot display burdens");
         }
 
         const data = await response.json();
         setBurdens(data);
       } catch (error) {
-        console.error("Error fetching burdens:", error);
+        console.error("Cannot fetch burdens:", error);
       }
     };
 
@@ -50,9 +50,9 @@ function BurdensLog() {
 
         <div className="burdens">
           {burdens.slice(0, isLoading).map((item, index) => (
-            <BurdensCard key={index} burdenText={item} />
+            <BurdensCard key={item.id} burdenText={item} index = {index}/>
           ))}
-          {burdens.length > 8 && (
+          {burdens.length < 4 && (
             <div className="load">
               <Button onClick={loadMoreBurdens} className="load-btn">
                 {isLoading ? "Loading..." : "Load more"}

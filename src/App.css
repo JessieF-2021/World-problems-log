@@ -158,6 +158,23 @@ h2 span {
   background-color: #c0392b;
 }
 
+
+.modal-btn {
+  width: 150px;
+  padding: 8px;
+  color: #fff;
+  background-color: #e14640;
+  margin: 18px 0 18px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn:hover {
+  box-shadow: 3px 3px 5px #9e9696;
+  cursor: pointer;
+}
+
 .load {
   display: flex;
   justify-content: center;

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
 import { IoClose } from "react-icons/io5";
 import "../components/Modal.css";
 import modal from "../assets/modal.png";
+import { Link } from "react-router-dom";
 
 function ShareBurden() {
   const [show, setShow] = useState(false);
@@ -48,6 +49,24 @@ function ShareBurden() {
     }
   };
 
+  const handleClick = () => {
+    console.log("button clicked");
+  };
+
+
+// useEffect(() => {
+//   const modalTimeout = setTimeout(() => {
+//     if(!openModal && burdenSent) {
+//       toggleModal();
+//     }
+//   }, 1500)
+  
+//   return () => clearTimeout(modalTimeout)
+// }, [openModal, burdenSent]);
+
+
+
+
   return (
     <div className="share-container">
       <div className="share-head">
@@ -88,11 +107,11 @@ function ShareBurden() {
       </form>
 
       <div className="share-btn">
-        <Button
+      <Button
           onClick={() => {
             handleSendBurden();
             toggleModal();
-          }}
+          }}
           className="primary-btn "
         >
           Send
@@ -109,6 +128,13 @@ function ShareBurden() {
               <h4>Burden sent successfully!</h4>
               <p>We'll get back to you as soon as possible</p>
             </div>
+            <Link to="/burdens-log">
+              <Button
+              className="modal-btn"
+                onClick={handleClick}>
+                Burdens Log
+              </Button>
+            </Link>
           </div>
         </div>
       )}
