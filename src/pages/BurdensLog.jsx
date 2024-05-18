@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import BurdensCard from "../components/BurdensCard";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
+// import ShareBurden from "./ShareBurden";
 
 function BurdensLog() {
   const [burdens, setBurdens] = useState([]);
-  const [isLoading, setIsLoading] = useState(4);
+  const [itemsToShow, setItemsToShow] = useState(4); // Renamed from isLoading to be more descriptive
+  const [isLoading, setIsLoading] = useState(false); // Separate state for loading status
 
   const loadMoreBurdens = () => {
-    setIsLoading((prevValue) => prevValue + 4);
+    setIsLoading(true);
+    setItemsToShow((prevValue) => prevValue + 4);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -38,6 +42,14 @@ function BurdensLog() {
     handleGetBurdens();
   }, []);
 
+  // const handleNewBurden = (newBurden) => {
+  //   setBurdens((prevBurdens) => [newBurden, ...prevBurdens]);
+  // };
+  // const newBurden = await response.json();
+
+  // if(onNewBurden) {
+  //   onNewBurden(newBurden)
+  // }
   return (
     <>
       <div className="trends-container">
@@ -49,10 +61,10 @@ function BurdensLog() {
         </div>
 
         <div className="burdens">
-          {burdens.slice(0, isLoading).map((item, index) => (
-            <BurdensCard key={item.id} burdenText={item} index = {index}/>
+          {burdens.slice(0, itemsToShow).map((item, index) => (
+            <BurdensCard key={item.id} burdenText={item.burden} index={index} />
           ))}
-          {isLoading < burdens.length && (
+          {itemsToShow < burdens.length && (
             <div className="load">
               <Button onClick={loadMoreBurdens} className="load-btn">
                 {isLoading ? "Loading..." : "Load more"}
@@ -66,10 +78,9 @@ function BurdensLog() {
 
           <p>
             WPL understands that not everyone feels comfortable sharing their
-            struggles openly. Whether it's personal issues, relationship <br />{" "}
-            dilemmas, or professional concerns, our platform offers a
-            judgement-free zone where you can speak your mind without fear of{" "}
-            <br /> repercussions.
+            struggles openly. Whether it's personal issues, relationship dilemmas,
+            or professional concerns, our platform offers a judgement-free zone
+            where you can speak your mind without fear of repercussions.
           </p>
 
           <Link to="/share-burden">
@@ -77,6 +88,7 @@ function BurdensLog() {
           </Link>
         </div>
       </div>
+      {/* <ShareBurden onNewBurden={handleNewBurden} /> */}
     </>
   );
 }

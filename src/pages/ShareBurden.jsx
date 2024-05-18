@@ -40,10 +40,14 @@ function ShareBurden() {
       if (!response.ok) {
         throw new Error("Error sending burden");
       }
+
       setBurdenSent(true);
 
       setBurdenText("");
       setEmail("");
+
+
+
     } catch (error) {
       console.error("Error sending burden:", error);
     }
