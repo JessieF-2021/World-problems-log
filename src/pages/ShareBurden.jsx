@@ -128,6 +128,7 @@ function ShareBurden() {
               <h4>Burden sent successfully!</h4>
               <p>We'll get back to you as soon as possible</p>
             </div>
+            <div className="modal-btns">
             <Link to="/burdens-log">
               <Button
               className="modal-btn"
@@ -135,6 +136,14 @@ function ShareBurden() {
                 Burdens Log
               </Button>
             </Link>
+            <Link to="/">
+              <Button
+              className="modal-btn2"
+                onClick={handleClick}>
+               Home page
+              </Button>
+            </Link>
+            </div>
           </div>
         </div>
       )}

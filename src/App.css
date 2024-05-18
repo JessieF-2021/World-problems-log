@@ -158,9 +158,15 @@ h2 span {
   background-color: #c0392b;
 }
 
+.modal-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 10px; */
+}
 
 .modal-btn {
-  width: 150px;
+  width: 130px;
   padding: 8px;
   color: #fff;
   background-color: #e14640;
@@ -171,6 +177,22 @@ h2 span {
 }
 
 .modal-btn:hover {
+  box-shadow: 3px 3px 5px #9e9696;
+  cursor: pointer;
+}
+
+.modal-btn2 {
+  width: 130px;
+  padding: 8px;
+  /* color: #fff; */
+  background-color: #dbdbdb;
+  margin: 18px 0 18px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-btn2:hover {
   box-shadow: 3px 3px 5px #9e9696;
   cursor: pointer;
 }
